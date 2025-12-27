@@ -14,10 +14,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
-            .csrf(csrf -> csrf.disable())     // disable CSRF (important!)
-            .cors(cors -> cors.disable())     // optional
+            .csrf(csrf -> csrf.disable())    
+            .cors(cors -> cors.disable())     
             .authorizeHttpRequests(auth -> 
-                auth.anyRequest().permitAll()  // allow all endpoints
+                auth.anyRequest().permitAll()  
             );
 
         return http.build();
